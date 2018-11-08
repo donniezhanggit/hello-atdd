@@ -1,4 +1,4 @@
-function getGreeting () {
+const getGreeting = function () {
   const url = `${window.location.origin}/greeting`;
   const greetingContent = document.querySelector("#greeting-content");
 
@@ -12,5 +12,5 @@ function getGreeting () {
 document.addEventListener("DOMContentLoaded", () => {
   const askGreeting = document.querySelector("#ask-greeting");
 
-  askGreeting.addEventListener("click", () => getGreeting());
+  askGreeting.addEventListener("click", getGreeting);
 });
